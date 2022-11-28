@@ -9,11 +9,11 @@ FROM nginx
 EXPOSE 8808
 
 RUN mkdir /etc/nginx/templates
-COPY default.conf.template /etc/nginx/templates
-COPY index.html /usr/share/nginx/html/
+COPY /html/default.conf.template /etc/nginx/templates
+COPY /html/index.html /usr/share/nginx/html/
 
 
 RUN mkdir /usr/share/nginx/html/static
-COPY ./static/script.js /usr/share/nginx/html/static
-COPY ./static/style.css /usr/share/nginx/html/static
+COPY /html/static/script.js /usr/share/nginx/html/static
+COPY /html/static/style.css /usr/share/nginx/html/static
 

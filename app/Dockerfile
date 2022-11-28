@@ -11,8 +11,8 @@ RUN apt-get  update -y
 # RUN apt-get install -y wget wait-for-it
 
 #RUN wget https://github.com/timoguic/acit4640-py-mysql/archive/refs/heads/master.zip -O /tmp/source.zip
-COPY ./api.py /app
-COPY ./web.py /app
+COPY /app/api.py /app
+COPY /app/web.py /app
 
 #RUN unzip /tmp/source.zip
 
@@ -22,7 +22,7 @@ COPY ./web.py /app
 WORKDIR /app
 #RUN python -m pip install -r ./requirements.txt
 
-COPY ./student_insert.sh .
+COPY /app/student_insert.sh .
 
 
 EXPOSE 5000
