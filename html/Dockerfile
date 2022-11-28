@@ -14,6 +14,7 @@ COPY /html/index.html /usr/share/nginx/html/
 
 
 RUN mkdir /usr/share/nginx/html/static
-COPY /html/static/script.js /usr/share/nginx/html/static
-COPY /html/static/style.css /usr/share/nginx/html/static
+# COPY /html/static/script.js /usr/share/nginx/html/static
+# COPY /html/static/style.css /usr/share/nginx/html/static
+COPY /html/static/* /usr/share/nginx/html/static
 
