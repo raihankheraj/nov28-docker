@@ -2,13 +2,11 @@ version: '3'
 
 services:
   app:
-    # build: ./app/
     image: raihankheraj/eval4640-app:latest
     env_file:
       - variables.env
 
   web:
-    # build: ./html/
     image: raihankheraj/eval4640-web:latest
     env_file:
       - variables.env
